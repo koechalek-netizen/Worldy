@@ -1,77 +1,145 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body{
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    background-color: #A0522D;
-}
-
-.card{
-    width: auto;
-    background-color: 	#ADD8E6;
-    padding: 3rem 2rem;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, .8);
-    border-radius: 1rem;
-
-}
-
-.property{
+body {
     display: flex;
-    align-items: flex-starts;
-    margin: 1rem 0;
-    column-gap: 1rem;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f8fafc; 
+
+     /* The Background Image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('https://media.gettyimages.com/id/1342817343/photo/elevated-view-of-old-books-in-sunlight.jpg?s=2048x2048&w=gi&k=20&c=FaFAjKywEYP_cZ0j_0NpdpUVIxur6L8XMYu_Th_NyJc=');
+    
+    /* Ensure the image covers the whole screen and stays put */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+
+    color: #1e293b;
+
+
 }
 
 
-.search-form{
+.search-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    width: 90%;
-    height: 40%;
-
-    margin-bottom: 2rem;
-    background-color: #ADD8E6;
-
-    border-radius: 1rem;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, .8);
-
+    gap: 0.5rem; 
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+    background: #ffffff;
+    border-radius: 50px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.search-form input,
-.search-form button{
-    flex-basis: 70%;
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
+.search-form input {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
     border: none;
     outline: none;
-    background-color: transparent;
-    color: black;
-    align-content: center;
+    font-size: 1rem;
+    background: transparent;
 }
 
-.search-form button{
-    flex-basis: 30%;
+.search-form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #3b82f6; 
+    color: white;
+    font-weight: 600;
     cursor: pointer;
-    border-top: 1px solid #545454;
-    
+    transition: background 0.2s ease;
 }
 
-.search-form button:hover{
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 .5rem #fff,
-    inset 0 0 .5rem rgba(0, 0, 0, .8)
-    
+.search-form button:hover {
+    background-color: #2563eb;
 }
 
-.search-form input{
-    align-content: center;
+
+.dictionary-app {
+    width: 100%;
+    max-width: 600px;
 }
 
+.card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.property {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+}
+
+
+.property span:first-child {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 700;
+}
+
+
+.property span:last-child {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #0f172a;
+}
+
+
+audio {
+    width: 100%;
+    height: 35px;
+    margin-top: 0.5rem;
+}
+
+.error-card {
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: #991b1b;
+}
+
+.error-card i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.error-msg {
+    font-size: 0.95rem;
+    color: #b91c1c;
+    line-height: 1.5;
+}
+
+h1{
+    color: #f1f5f9;
+    font-family: 'Franklin Gothic Medium';
+}

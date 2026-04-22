@@ -21,6 +21,19 @@ btn.addEventListener('click', fetchandCreateCard)
 async function fetchandCreateCard() {
     const data= await dictionaryFn(input.value)
 
+     if (!data || data.title === "No Definitions Found") {
+        dictionaryArea.innerHTML = `
+            <div class="error-card">
+                <div class="error-title">Oops! Word Not Found</div>
+                <p class="error-msg">
+                    We couldn't find <b>"${input.value}"</b> in our records. 
+                    Check your spelling or try another word.
+                </p>
+            </div>
+        `;
+    }
+
+
     console.log(data)
 
     let partOfSpeechArray =[]
